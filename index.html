@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>🎀 Hello Kitty 生日礼物 · 总览</title>
+  <title>🎀 迷之礼物商店</title>
   <style>
     * {
       margin: 0;
@@ -38,7 +38,7 @@
       display: flex;
     }
 
-    /* ----- 生日提醒弹窗（首次加载）----- */
+    /* ----- 弹窗（首次加载）----- */
     .modal-mask {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -532,10 +532,11 @@
       margin: 20px 0;
     }
     .blessing-text {
-      font-size: 22px;
-      font-weight: bold;
+      font-size: 20px;
+      font-weight: 500;
       color: #5A3A3F;
       line-height: 1.6;
+      text-align: left;
     }
     .back-btn {
       background: #E60012;
@@ -554,15 +555,15 @@
 </head>
 <body>
 <div id="app">
-  <!-- 生日提醒弹窗（内容已更新） -->
+  <!-- 弹窗 -->
   <div class="modal-mask" id="birthdayModal">
     <div class="modal-card">
       <span class="modal-close-icon" id="closeModalBtn">✕</span>
       <div class="modal-icon">🐱🎀🎂</div>
       <div class="modal-title">Happy Birthday!</div>
       <div class="modal-text">
-        🛍️ 本店商品均不支持七天无理由退货<br>
-        🎁 试试把所有物品添加到购物车，说不定会发生什么...
+        🛍️ 本地商品均不支持七天无理由退货<br>
+        🎁 试试把所有物品添加到购物车，说不定会发生什么..
       </div>
       <button class="modal-btn" id="enterBtn">点蜡烛 开始 🕯️</button>
     </div>
@@ -571,16 +572,15 @@
   <!-- ========== 主视图 ========== -->
   <div id="menuView" class="view active">
     <div class="header">
-      <h1>🐱 Kitty 礼物盒 🎀</h1>
+      <h1>🎀 迷之礼物商店 🎀</h1>
       <div class="birthday-tag">🎂 生日快乐 🎂</div>
     </div>
 
     <div style="text-align: right; padding: 0 16px;">
-      <span class="add-all-btn" id="addAllBtn">🎁 一键全加</span>
+      <span class="add-all-btn" id="addAllBtn">🎁 一键全加购物车</span>
     </div>
 
     <div class="main-content">
-      <!-- 侧边分类已隐藏，直接显示商品列表 -->
       <div class="goods-panel" id="goodsPanel"></div>
     </div>
 
@@ -605,16 +605,15 @@
     <div class="order-summary" id="orderSummary"></div>
     <div class="blessing-message">
       <div class="blessing-text" id="blessingMessage">
-        ⭐ 亲爱的，愿你的每一天<br>都像 Hello Kitty 一样可爱！<br>
-        🍰 愿你尝遍世间甜美，永远被爱包围～<br>
-        🎁 这是属于你的特别日子，尽情快乐吧！
+        生日快乐(＾◡＾)っ🎂<br><br>
+        这里本来想抒发感想，写点小作业的，熬到现在脑袋完全空掉了(。o‿。）<br><br>
+        最后吐槽一下，终于做好了，原来做个网页这么难实现。本来想做喜茶那种的点单界面，但是那些模板太麻烦了，编译打包什么的头都大了，完全不懂的说(=_=)。这个凑活看一下吧，没时间打磨了，发呆的时候突然想到感觉自己是天才(^▽^)。。
       </div>
     </div>
     <button class="back-btn" id="backToMenuBtn">🎀 返回修改礼物</button>
-    <div style="margin-top: 20px; color: #B35463;">❤️ 仅供娱乐 · 生日快乐 ❤️</div>
   </div>
 
-  <!-- 商品详情抽屉 (遮罩+面板) -->
+  <!-- 商品详情抽屉 -->
   <div class="drawer-mask" id="drawerMask"></div>
   <div class="drawer-panel" id="drawerPanel">
     <div class="drawer-handle"></div>
